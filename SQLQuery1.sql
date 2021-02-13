@@ -1,4 +1,4 @@
-﻿/*CREATE TABLE [dbo].[Brands] (
+﻿CREATE TABLE [dbo].[Brands] (
     [BrandId]   INT           IDENTITY (1, 1) NOT NULL,
     [BrandName] NVARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([BrandId] ASC)
@@ -14,13 +14,13 @@ CREATE TABLE [dbo].[Cars] (
     [Id]        INT           IDENTITY (1, 1) NOT NULL,
     [BrandId]      INT           NULL,
     [ColorId]      INT           NULL,
-	[ModelYear]    NVARCHAR (50) NULL,
-    [DailyPrice]   DECIMAL (18)  NULL,
+	[ModelYear]    INT           NULL,
+    [DailyPrice]   money   NULL,
     [Description] NVARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
     FOREIGN KEY ([ColorId]) REFERENCES [dbo].[Colors] ([ColorId]),
     FOREIGN KEY ([BrandId]) REFERENCES [dbo].[Brands] ([BrandId])
-);*/
+);
 
 
 INSERT INTO Colors(ColorName) VALUES
