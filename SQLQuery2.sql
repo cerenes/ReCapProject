@@ -40,7 +40,7 @@ CREATE TABLE [dbo].[Customers] (
 );
 
 CREATE TABLE [dbo].[Rentals] (
-    [RentalId]   INT           IDENTITY (1, 1) NOT NULL,
+    [RentalId]   INT           IDENTITY (1,1)  NOT NULL,
 	[Id]      INT           NULL,
 	[CustomerId]      INT           NULL,
     [RentDate] DateTime NULL,
