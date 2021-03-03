@@ -25,5 +25,8 @@ namespace Business.Constants
         public static string UserListed = "Kullanıcılar listelendi";
         public static string CustomerListed = "Müşteriler listelendi";
         public static string NullDate = "Tarih boş değil";
+        public static string AuthorizationDenied = "Yetkiniz yok";
+
+        public static string UsersListed = "Üyeler listelendi";
     }
 }
