@@ -28,5 +28,6 @@ namespace Business.Constants
         public static string AuthorizationDenied = "Yetkiniz yok";
 
         public static string UsersListed = "Üyeler listelendi";
+        public static string CarUpdated = "Araba güncellendi";
     }
 }

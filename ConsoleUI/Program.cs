@@ -58,7 +58,7 @@ namespace ConsoleUI
             UserManager userManager = new UserManager(new EfUserDal());
             userManager.Add(new User { FirstName = "Sedat" });
             //userManager.Delete(new User { UserId = 6 });
-            userManager.Update(new User { UserId = 3, FirstName="Azize", LastName="Aslan", Email="azize_aslan@hotmail.com"});
+            //userManager.Update(new User { UserId = 3, FirstName="Azize", LastName="Aslan", Email="azize_aslan@hotmail.com"});
             var result = userManager.GetAll();
             foreach (var user in result.Data)
             {
