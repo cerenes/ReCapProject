@@ -64,11 +64,11 @@ CREATE TABLE [dbo].[Rentals] (
     FOREIGN KEY ([CustomerId]) REFERENCES [dbo].[Customers] ([CustomerId])
 );
 CREATE TABLE [dbo].[CarImages] (
-    [CarImagesId]   INT           IDENTITY (1, 1) NOT NULL,
+    [ImagesId]   INT           IDENTITY (1, 1) NOT NULL,
 	[Id]      INT           NULL,
-    [ImagePath] NVARCHAR (50) NULL,
+    [ImagePath] nvarchar(max)  NULL,
 	[Date] DateTime  NULL,
-    PRIMARY KEY CLUSTERED ([CarImagesId] ASC),
+    PRIMARY KEY CLUSTERED ([ImagesId] ASC),
 	FOREIGN KEY (Id) REFERENCES [dbo].[Cars] ([Id]),
 	
 );
@@ -97,9 +97,14 @@ INSERT INTO Rentals(Id,CustomerId,RentDate,ReturnDate) VALUES
 	(1,'1',2013-02-25,2015-05-30),
 	(1,'2',2017-05-15,2018-01-30);
 
+	INSERT INTO CarImages(Id,ImagePath,Date) VALUES
+	('1','araba1.jpeg',2015-05-30);
+
+
     Select * From Cars
     Select * From Colors
     Select * From Brands
+	Select * from CarImages
 	Select * From Customers
 	Select * From Users
 	Select * From UserOperationClaims

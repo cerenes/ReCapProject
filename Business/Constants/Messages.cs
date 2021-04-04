@@ -29,5 +29,7 @@ namespace Business.Constants
 
         public static string UsersListed = "Üyeler listelendi";
         public static string CarUpdated = "Araba güncellendi";
+
+        public static string CarImageLimitExceeded = "Araba resim sınırı aşıldı";
     }
 }
