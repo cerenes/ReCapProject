@@ -8,6 +8,7 @@ using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,6 +29,16 @@ namespace Business.Concrete
         {
             _customerDal.Add(customer);
             return new SuccessResult(Messages.CustomerAdded);
+        }
+        public IDataResult<CustomerDetailDto> GetByEmail(string email)
+        {
+            var getByEmail = _customerDal.GetByEmail(user => user.Email == email);
+            return new SuccessDataResult<CustomerDetailDto>(getByEmail);
+        }
+        public IDataResult<List<CustomerDetailDto>> GetCustomerDetails()
+        {
+            var getCustomerDetails = _customerDal.GetCustomerDetails();
+            return new SuccessDataResult<List<CustomerDetailDto>>(getCustomerDetails);
         }
 
         public IResult Delete(Customer customer)

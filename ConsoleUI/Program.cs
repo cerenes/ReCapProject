@@ -15,7 +15,7 @@ namespace ConsoleUI
             //BrandTest();
             //UserTest();
             //CustomerTest();
-            RentalTest();
+            //RentalTest();
         }
         /* private static void BrandTest()
          {
@@ -65,19 +65,19 @@ namespace ConsoleUI
                 Console.WriteLine(user.FirstName);
             }
         }
-        private static void RentalTest()
-        {
+        //private static void RentalTest()
+        //{
             
-            RentalManager rentalManager = new RentalManager(new EfRentalDal());
-            //rentalManager.Add(new Rental {Id=4 });
-            //rentalManager.Delete(new Rental {Id = 6 });
-            //rentalManager.Update(new Rental { RentalId=5, Id=2, CustomerId=1, RentDate=DateTime.Now, ReturnDate=DateTime.Now.AddDays(+2) });
-            var result = rentalManager.GetAll();
-            foreach (var rental in result.Data)
-            {
-                Console.WriteLine(rental.RentalId);
-            }
-        }
+        //   // RentalManager rentalManager = new RentalManager(new EfRentalDal());
+        //    //rentalManager.Add(new Rental {Id=4 });
+        //    //rentalManager.Delete(new Rental {Id = 6 });
+        //    //rentalManager.Update(new Rental { RentalId=5, Id=2, CustomerId=1, RentDate=DateTime.Now, ReturnDate=DateTime.Now.AddDays(+2) });
+        //    var result = rentalManager.GetAll();
+        //    foreach (var rental in result.Data)
+        //    {
+        //        Console.WriteLine(rental.RentalId);
+        //    }
+        //}
 
         private static void CarTest()
         {
